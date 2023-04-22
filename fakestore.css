@@ -1,0 +1,15 @@
+#screen{
+    width: 1348px;
+    height: 2000px;
+    border: 1px solid sienna;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+/* .smalldiv{
+    width: 500px;
+    height: fit-content;
+    background-color: orange;
+    border: 1px solid blueviolet;
+} */
