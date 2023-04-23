@@ -1,6 +1,7 @@
 let screen = document.getElementById("screen")
 let input = document.getElementById("search")
 let show = document.getElementById("show")
+let show1 = document.getElementById("show1")
 let index = 1
     // let addminus = document.getElementById("addminus")
     // let addcart = document.getElementById("addcart")
@@ -11,12 +12,12 @@ let index = 1
     }
     function increase() {
         if (index == 1) {
-            show.innerHTML ++ 
+            show1.innerHTML ++ 
         }
     }
     function decrease() {
         if (index == 1) {
-            show.innerHTML --
+            show1.innerHTML --
         }
     }
     function consume() {
