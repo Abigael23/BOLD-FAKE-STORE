@@ -1,7 +1,7 @@
 let screen = document.getElementById("screen")
-    let input = document.getElementById("search")
-    let show = document.getElementById("show")
-    let index = 1
+let input = document.getElementById("search")
+let show = document.getElementById("show")
+let index = 1
     // let addminus = document.getElementById("addminus")
     // let addcart = document.getElementById("addcart")
     document.getElementById("addminus").style.display = "none"
@@ -28,7 +28,7 @@ let screen = document.getElementById("screen")
         let image = element.image;
         console.log(title);
         screen.innerHTML +=`
-        <div class="w-25 text-white bg-warning border rounded shadow mx-auto my-5">
+        <div class="w-50 text-primary bg-basic border rounded shadow mx-auto my-5">
         <h3>${element.id}</h3>
         <h1>${element.category}</h1>
         <h5>${description}}</h5>
