@@ -20,6 +20,7 @@ let index = 1
             show1.innerHTML --
         }
     }
+    // <h3>${element.id}</h3>
     function consume() {
     fetch("https://fakestoreapi.com/products").then((dan)=> dan.json()).then((res)=>{
     console.log(res);
@@ -29,14 +30,15 @@ let index = 1
         let image = element.image;
         console.log(title);
         screen.innerHTML +=`
-        <div class="w-50 text-primary bg-basic border rounded shadow mx-auto my-5">
-        <h3>${element.id}</h3>
-        <h1>${element.category}</h1>
-        <h5>${description}}</h5>
-        <div>${image}</div>
-        <h3>${element.price}</h3>
-        <h6>${Object.values(element.rating)}</h6>
-        <h6>${title}</h6>
+        <div id="smalldiv" class="text-primary bg-basic border rounded shadow my-2">
+        <img src="${image}" alt="">
+        <h3>${title.length > 18 ? title.substring(0, 18).concat('...'): title}</h3>
+        <h5>${element.category}</h1>
+        <h6>${description.length > 18 ? title.substring(0, 18).concat('...more'): description}}}</h5>
+        <h6>$${element.price}</h3>
+        <h6>⭐⭐⭐${element.rating.rate}</h6>
+        <h6>(${element.rating.count})</h6>
+        
         </div>
             `
     });
@@ -44,19 +46,19 @@ let index = 1
 }
 consume()
 // for seacrh button
-let allproduct = fetch("https://fakestoreapi.com/products")
-    let array = ["await allproduct.json()"]
+// let allproduct = fetch("https://fakestoreapi.com/products")
+//     let array = ["await allproduct.json()"]
     
-function search() {
-    let result = array.filter((product)=> product == input.value)
-        if (input.value ==="") {
-            screen.innerHTML = ""
-        } else if (result != "") {
-           screen.innerHTML = "" 
-           result.map(function (element) {
-            screen.innerHTML += "<h1>" + element + "</h1>"
-           })
-        } else {
-          screen.innerHTML = "NO RECORD FOUND"  
-        }
-}
+// function search() {
+//     let result = array.filter((product)=> product == input.value)
+//         if (input.value ==="") {
+//             screen.innerHTML = ""
+//         } else if (result != "") {
+//            screen.innerHTML = "" 
+//            result.map(function (element) {
+//             screen.innerHTML += "<h1>" + element + "</h1>"
+//            })
+//         } else {
+//           screen.innerHTML = "NO RECORD FOUND"  
+//         }
+// }
