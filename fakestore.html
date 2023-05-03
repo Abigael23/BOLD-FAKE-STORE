@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +10,20 @@
     <link rel="stylesheet" href="../../icofont/icofont/icofont.min.css">
     <title>Document</title>
 </head>
+
 <body>
-    <main>
+    <main class="w-100 position-relative">
         <nav class="navbar w-100 border p-1 rounded shadow mx-auto bg-success">
             <a class="navbar-brand text-danger" href="">
                 <h1 class="text-primary">
                     <i class="icofont-navigation-menu"></i>
                     BOLD-FakeStore
-                </h1> 
+                </h1>
             </a>
             <ul class="nav align-items-center">
-               <li class="nav-item">
+                <li class="nav-item">
                     <a href="#" class="nav-link fs-3 fw-bold">
-                        <i class="icofont-ui-search"></i>  
+                        <i class="icofont-ui-search"></i>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -31,15 +33,15 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link fs-3 fw-bold">
-                <i class="icofont-cart-alt"></i>
+                        <i class="icofont-cart-alt" id="cart-count" onclick="cartCount"></i>
                     </a>
                 </li>
             </ul>
         </nav>
         <input id="search" type="text">
         <button onclick="search()">Search</button>
-    <div id="screen">
-        <div id="addcart">
+        <div id="screen" class="w-100 display-flex flex-wrap-wrap justify-content-center align-items-center">
+            <!-- <div id="addcart">
             <button onclick="addcart()" class="btn btn-warning text-white">
                 <i class="icofont-cart"></i>
                 ADD TO CART
@@ -49,10 +51,13 @@
             <button onclick="increase()" class="btn btn-warning text-white">+</button>
             &nbsp; &nbsp; &nbsp; <span id="show1" class="text-danger"></span> &nbsp; &nbsp; &nbsp;
             <button onclick="decrease()" class="btn btn-warning text-white">-</button>
-            
+        </div> -->
         </div>
-    </div>
+        <div class="position-absolute w-100 d-flex align-items-center justify-content-center" id="showItemsModal">
+            <div class="bg-white shadow w-75" id="itemsModal"></div>
+        </div>
     </main>
 </body>
-</html>
 <script src="C:\Users\USER\Desktop\Javascript\BOLD-FakeStore\fakestore.js"></script>
+
+</html>
